@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-sky-950 text-white">
+    <div
+      id="alert"
+      class="mx-auto w-64 font-bold -translate-y-10 h-8 rounded-lg flex justify-center items-center transition"
+    >
+      alert
+    </div>
+
+    <form
+      id="form"
+      class="flex flex-col gap-5 items-center bg-sky-900/80 p-8 rounded-xl shadow min-w-[320px] w-full max-w-xs mx-auto"
+    >
+      <h1 class="text-2xl font-semibold mb-2 tracking-tight">Formulario</h1>
+      <input
+        type="number"
+        id="number"
+        placeholder="Número"
+        class="w-full bg-sky-950/60 border-none rounded px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-400 transition"
+      />
+      <button
+        id="btn"
+        type="submit"
+        class="w-full bg-sky-400 text-sky-950 font-medium rounded py-2 mt-2 hover:bg-sky-300 transition"
+      >
+        Enviar
+      </button>
+      <section
+        class="flex gap-1 items-center justify-center font-medium w-full"
+      >
+        <div
+          id="display"
+          class="flex gap-1 items-center justify-center w-full"
+        ></div>
+      </section>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

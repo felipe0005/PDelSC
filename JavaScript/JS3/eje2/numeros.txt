@@ -1,0 +1,4 @@
+Validos: [] 
+Inivalidos: [null]
+Cantidad validos: 0
+Cantidad invalidos: 1

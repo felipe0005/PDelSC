@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir Archivo TXT</title>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex items-center justify-center"
+  >
+    <form
+      id="form"
+      class="bg-white/10 backdrop-blur-md shadow-xl rounded-2xl p-10 flex flex-col gap-6 items-center w-full max-w-md border border-white/20"
+    >
+      <label
+        for="file"
+        class="text-3xl font-extrabold text-pink-300 drop-shadow"
+        >Sube tu archivo TXT</label
+      >
+      <input
+        type="file"
+        id="file"
+        accept=".txt"
+        class="file:bg-pink-500 file:text-white file:font-semibold file:rounded-lg file:px-4 file:py-2 file:border-0 file:cursor-pointer bg-white/20 text-white rounded-lg px-4 py-2 transition hover:bg-white/30"
+      />
+      <button
+        id="btn"
+        type="submit"
+        class="bg-gradient-to-r from-pink-500 to-indigo-500 text-white font-bold rounded-lg px-6 py-2 shadow-lg hover:scale-105 hover:from-pink-400 hover:to-indigo-400 transition"
+      >
+        Enviar archivo
+      </button>
+      <div id="display" class="w-full text-center mt-4 text-white"></div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
