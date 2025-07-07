@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Minimalista</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 flex flex-col items-center px-2">
+    <h1 class="text-2xl font-semibold text-gray-800 mt-12 mb-6">Formulario</h1>
+
+    <form
+      action="/sendData"
+      method="POST"
+      id="form"
+      class="w-full max-w-md bg-white p-6 rounded-lg shadow border border-gray-200 flex flex-col gap-4"
+    >
+      <div class="flex gap-2">
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre"
+        />
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="text"
+          name="apellido"
+          id="apellido"
+          placeholder="Apellido"
+        />
+      </div>
+
+      <div class="flex gap-2">
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="number"
+          name="edad"
+          id="edad"
+          placeholder="Edad"
+        />
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="date"
+          name="nacimiento"
+          id="nacimiento"
+        />
+      </div>
+
+      <div class="flex gap-2 items-center">
+        <label class="flex items-center gap-1 text-gray-600">
+          <input
+            type="radio"
+            name="sexo"
+            value="masculino"
+            class="accent-violet-500"
+          />
+          Masculino
+        </label>
+        <label class="flex items-center gap-1 text-gray-600">
+          <input
+            type="radio"
+            name="sexo"
+            value="femenino"
+            class="accent-violet-500"
+          />
+          Femenino
+        </label>
+        <select
+          name="estado-civil"
+          id="estado-civil"
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-violet-400"
+        >
+          <option value="soltero">Soltero</option>
+          <option value="casado">Casado</option>
+        </select>
+      </div>
+
+      <div class="flex gap-2">
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="number"
+          name="documento"
+          id="documento"
+          placeholder="Documento"
+        />
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="text"
+          name="nacionalidad"
+          id="nacionalidad"
+          placeholder="Nacionalidad"
+        />
+      </div>
+
+      <div class="flex gap-2">
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="tel"
+          name="telefono"
+          id="telefono"
+          placeholder="Teléfono"
+        />
+        <input
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-400"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+        />
+      </div>
+
+      <div class="flex gap-2 items-center">
+        <label for="hijos" class="text-gray-600 flex items-center gap-1">
+          <input
+            type="checkbox"
+            name="hijos"
+            id="hijos"
+            class="accent-violet-500"
+          />
+          ¿Tiene hijos?
+        </label>
+        <input
+          type="number"
+          name="cantidad-hijos"
+          id="cantidad-hijos"
+          placeholder="Cantidad"
+          disabled
+          class="flex-1 bg-gray-100 border border-gray-300 rounded px-3 py-2 text-gray-400 placeholder-gray-300 focus:outline-none"
+        />
+      </div>
+
+      <button
+        class="bg-violet-500 text-white font-medium rounded px-6 py-2 hover:bg-violet-600 transition"
+        type="submit"
+      >
+        Enviar
+      </button>
+    </form>
+
+    <div class="w-full max-w-md mt-10">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Usuarios</h2>
+      <ul
+        id="lista"
+        class="bg-white border border-gray-200 rounded-lg p-4 text-gray-700"
+      ></ul>
+    </div>
+  </body>
+</html>
