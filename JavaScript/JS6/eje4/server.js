@@ -25,7 +25,7 @@ app.post("/api/peliculas", (req, res) => {
   }
 });
 
-app.post("/api/pokemons/:id", (req, res) => {
+app.post("/api/pelicula/:id", (req, res) => {
   try {
     const { id } = req.params;
     const pelicula = PELICULAS.filter((peli) => peli.id === parseInt(id));
