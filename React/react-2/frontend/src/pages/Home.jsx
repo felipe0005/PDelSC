@@ -9,9 +9,9 @@ export default function UsuariosABMLC() {
     surname: "",
     direction: "",
     phone: "",
-    landlinephone: "",
+    personalphone: "",
     email: "",
-    nationalestate: "",
+    nacionalestate: "",
   });
 
   const fetchUsuarios = () => {
@@ -32,9 +32,9 @@ export default function UsuariosABMLC() {
       surname: "",
       direction: "",
       phone: "",
-      landlinephone: "",
+      personalphone: "",
       email: "",
-      nationalestate: "",
+      nacionalestate: "",
     });
     setShowForm(true);
   };
@@ -131,7 +131,7 @@ export default function UsuariosABMLC() {
                 {usuario.phone}
               </td>
               <td className="px-6 py-4 text-sm text-gray-700">
-                {usuario.landlinephone}
+                {usuario.personalphone}
               </td>
               <td className="px-6 py-4 text-sm text-gray-700">
                 {usuario.email}
@@ -139,12 +139,12 @@ export default function UsuariosABMLC() {
               <td className="px-6 py-4">
                 <span
                   className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                    usuario.nationalestate === "casado"
+                    usuario.nacionalestate === "casado"
                       ? "bg-green-100 text-green-800"
                       : "bg-red-100 text-red-800"
                   }`}
                 >
-                  {usuario.nationalestate}
+                  {usuario.nacionalestate}
                 </span>
               </td>
               <td className="px-6 py-4 flex gap-2">
@@ -218,9 +218,9 @@ export default function UsuariosABMLC() {
               <input
                 type="tel"
                 placeholder="Tel. Personal"
-                value={formData.landlinephone}
+                value={formData.personalphone}
                 onChange={(e) =>
-                  setFormData({ ...formData, landlinephone: e.target.value })
+                  setFormData({ ...formData, personalphone: e.target.value })
                 }
                 className="border px-3 py-2 rounded w-full"
               />
@@ -235,9 +235,9 @@ export default function UsuariosABMLC() {
                 required
               />
               <select
-                value={formData.nationalestate}
+                value={formData.nacionalestate}
                 onChange={(e) =>
-                  setFormData({ ...formData, nationalestate: e.target.value })
+                  setFormData({ ...formData, nacionalestate: e.target.value })
                 }
                 className="border px-3 py-2 rounded w-full col-span-2"
                 required
