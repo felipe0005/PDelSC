@@ -14,3 +14,8 @@
     url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
   animation: move-stars 200s linear infinite;
 }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}

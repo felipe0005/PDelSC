@@ -1,33 +1,31 @@
 export default function AboutMe() {
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
+    <section id="about" className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
       {/* Fondo estrellas */}
       <div className="absolute inset-0 stars -z-10"></div>
 
-      {/* Contenido */}
       <div className="max-w-3xl text-center px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Sobre mí
+          About me
         </h2>
 
         <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-          Soy{" "}
+          i'am{" "}
           <span className="font-semibold text-rose-400">
-            desarrollador Full Stack
+            Full stack developer
           </span>
-          , apasionado por la tecnología y la creación de soluciones digitales.
-          Me encanta{" "}
+          , passionate about technology and creating digital solutions I love{" "}
           <span className="font-semibold text-purple-400">
-            trabajar en equipo
+            working as a team
           </span>{" "}
-          y aprender cosas nuevas constantemente.
+          and constantly learn new things.
         </p>
 
         <p className="text-gray-300 text-lg md:text-xl leading-relaxed mt-4">
-          Me considero una persona{" "}
-          <span className="text-rose-400">responsable</span>,
-          <span className="text-purple-400"> amable</span> y siempre dispuesta a
-          dar lo mejor para lograr grandes resultados junto con mi equipo.
+          I consider myself a{" "}
+          <span className="text-rose-400"> responsible</span>,
+          <span className="text-purple-400"> kind </span> person and always
+          willing to do my best to achieve great results together with my team.
         </p>
       </div>
 
@@ -37,13 +35,13 @@ export default function AboutMe() {
           <p className="text-white font-semibold">Fullstack</p>
         </div>
         <div className="p-4 bg-slate-800 rounded-2xl shadow-lg hover:scale-105 transition">
-          <p className="text-white font-semibold">Trabajo en equipo</p>
+          <p className="text-white font-semibold">Team working</p>
         </div>
         <div className="p-4 bg-slate-800 rounded-2xl shadow-lg hover:scale-105 transition">
-          <p className="text-white font-semibold">Responsable</p>
+          <p className="text-white font-semibold">Responsible</p>
         </div>
         <div className="p-4 bg-slate-800 rounded-2xl shadow-lg hover:scale-105 transition">
-          <p className="text-white font-semibold">Amable</p>
+          <p className="text-white font-semibold">Kind</p>
         </div>
       </div>
     </section>

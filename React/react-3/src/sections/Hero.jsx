@@ -35,6 +35,7 @@ export default function Hero() {
   return (
     <section
       ref={container}
+      id="hero"
       className="relative text-8xl h-screen flex flex-col justify-center pl-8 overflow-hidden"
     >
       {/* Fondo estrellas */}
