@@ -1,4 +1,3 @@
-//importamos la secciones, img y components para usarlos
 import Nav from "../sections/Nav";
 import Hero from "../sections/Hero";
 import AboutMe from "../sections/AbaoutMe";

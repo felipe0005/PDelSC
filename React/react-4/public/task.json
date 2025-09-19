@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Estudiar React",
+    "description": "Repasar hooks y componentes",
+    "date": "2025-09-18",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Hacer el TP",
+    "description": "TP de lista de tareas con React Router",
+    "date": "2025-09-18",
+    "completed": true
+  }
+]
