@@ -16,39 +16,39 @@ export default function CreateTask({ setTasks }) {
         title,
         description,
         date: new Date().toLocaleDateString(),
-        completed: false, // 👈 siempre empieza como incompleta
+        completed: false,
       },
     ]);
 
-    navigate("/"); // Redirige a Home
+    navigate("/");
   };
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto bg-white p-6 shadow-lg rounded-xl"
+      className="max-w-md mx-auto bg-white p-6 shadow-2xl rounded-xl"
     >
-      <h2 className="text-2xl font-bold mb-4">➕ Nueva Tarea</h2>
+      <h2 className="text-2xl font-bold mb-4"> Nueva Tarea</h2>
 
       <label className="block mb-2 font-semibold">Título</label>
       <input
         type="text"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => setTitle(e.target.value.replace(/[0-9]/g, ""))}
         required
-        className="w-full p-2 border rounded-lg mb-4"
+        className="w-full p-2 border rounded-lg mb-4 invalid:ring-red-500"
       />
 
       <label className="block mb-2 font-semibold">Descripción</label>
       <textarea
         value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        onChange={(e) => setDescription(e.target.value.replace(/[0-9]/g, ""))}
         required
-        className="w-full p-2 border rounded-lg mb-4"
+        className="w-full p-2 border rounded-lg mb-4 invalid:ring-red-500"
       ></textarea>
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+        className="font-bold w-full border-2  bg-blue-600 text-white py-2 rounded-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 transition duration-200"
       >
         Guardar
       </button>

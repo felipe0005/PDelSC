@@ -5,7 +5,7 @@ export default function TaskDetail({ tasks, setTasks }) {
   const task = tasks.find((t) => t.id === parseInt(id));
 
   if (!task) {
-    return <p className="text-red-600">❌ Tarea no encontrada</p>;
+    return <p className="text-red-600"> Tarea no encontrada</p>;
   }
 
   const toggleCompleted = () => {
@@ -26,10 +26,10 @@ export default function TaskDetail({ tasks, setTasks }) {
           task.completed ? "text-green-600" : "text-red-600"
         }`}
       >
-        {task.completed ? "✅ Completa" : "⌛ Incompleta"}
+        {task.completed ? " Completa" : " Incompleta"}
       </p>
 
-      {/* Botón para cambiar estado */}
+
       <button
         onClick={toggleCompleted}
         className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
@@ -41,7 +41,7 @@ export default function TaskDetail({ tasks, setTasks }) {
         to="/"
         className="mt-4 inline-block text-blue-600 hover:underline block text-center"
       >
-        🔙 Volver a la lista
+         Volver a la lista
       </Link>
     </div>
   );
