@@ -3,46 +3,53 @@ import cors from "cors";
 import { conn } from "./connect.js";
 
 const app = express();
-
 const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
 
+// GET todos los usuarios
 app.get("/api/usuarios", async (req, res) => {
   try {
     const [rows] = await conn.query("SELECT * FROM usr");
     res.json(rows);
   } catch (err) {
+    console.error("Error en GET:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
+//Ruta Post sirve para crear un nuevo usuario
 app.post("/api/usuarios", async (req, res) => {
   try {
+    
     const {
       name,
       surname,
       direction,
       phone,
-      personalphone,
+      landlinephone,
       email,
-      nacionalestate,
+      nationalestate,
     } = req.body;
+
     const [result] = await conn.query(
-      `INSERT INTO usr (name, surname, direction, phone, personalphone, email, nacionalestate)
+      `INSERT INTO usr (name, surname, direction, phone, landlinephone, email, nationalestate)
        VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [name, surname, direction, phone, personalphone, email, nacionalestate]
+      [name, surname, direction, phone, landlinephone, email, nationalestate]
     );
+
     const [newUser] = await conn.query("SELECT * FROM usr WHERE id = ?", [
       result.insertId,
     ]);
     res.json(newUser[0]);
   } catch (err) {
+    console.error("Error en POST:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
+//Ruta put para actualizar
 app.put("/api/usuarios/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -51,28 +58,33 @@ app.put("/api/usuarios/:id", async (req, res) => {
       surname,
       direction,
       phone,
-      personalphone,
+      landlinephone,
       email,
-      nacionalestate,
+      nationalestate,
     } = req.body;
+
     await conn.query(
-      `UPDATE usr SET name=?, surname=?, direction=?, phone=?, personalphone=?, email=?, nacionalestate=? WHERE id=?`,
+      `UPDATE usr 
+       SET name=?, surname=?, direction=?, phone=?, landlinephone=?, email=?, nationalestate=? 
+       WHERE id=?`,
       [
         name,
         surname,
         direction,
         phone,
-        personalphone,
+        landlinephone,
         email,
-        nacionalestate,
+        nationalestate,
         id,
       ]
     );
+
     const [updatedUser] = await conn.query("SELECT * FROM usr WHERE id = ?", [
       id,
     ]);
     res.json(updatedUser[0]);
   } catch (err) {
+    console.error("Error en PUT:", err);
     res.status(500).json({ error: err.message });
   }
 });
@@ -83,10 +95,12 @@ app.delete("/api/usuarios/:id", async (req, res) => {
     await conn.query("DELETE FROM usr WHERE id = ?", [id]);
     res.json({ message: "Usuario eliminado" });
   } catch (err) {
+    console.error("Error en DELETE:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
+// Arrancar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
