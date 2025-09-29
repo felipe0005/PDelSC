@@ -20,7 +20,7 @@ export default function TaskDetail({ tasks, setTasks }) {
     <div className="max-w-lg mx-auto bg-white shadow-lg rounded-xl p-6">
       <h2 className="text-2xl font-bold mb-2">{task.title}</h2>
       <p className="mb-2">{task.description}</p>
-      <p className="text-sm text-gray-500">📅 {task.date}</p>
+      <p className="text-sm text-gray-500"> {task.date}</p>
       <p
         className={`mt-2 font-semibold ${
           task.completed ? "text-green-600" : "text-red-600"

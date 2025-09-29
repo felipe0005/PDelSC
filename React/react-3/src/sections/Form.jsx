@@ -1,4 +1,4 @@
-{/*import { useState } from "react";
+import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = "https://ypngmgqblcpuqchrjftc.supabase.co";
@@ -31,17 +31,18 @@ export default function Form() {
       className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden px-6"
     >
       <div className="absolute inset-0 stars -z-10"></div>
+
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
         Formulario
       </h2>
       <form
-        className="bg-slate-800 rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col gap-6"
+        className="bg-slate-800/40 rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col gap-6"
         onSubmit={handleSubmit}
       >
         <input
           type="text"
           placeholder="Nombre"
-          className="p-3 rounded bg-slate-700 text-white focus:outline-none"
+          className="p-3 rounded bg-slate-700/50 r text-white focus:outline-none"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
           required
@@ -49,14 +50,14 @@ export default function Form() {
         <input
           type="text"
           placeholder="Apellido"
-          className="p-3 rounded bg-slate-700 text-white focus:outline-none"
+          className="p-3 rounded bg-slate-700/50 text-white focus:outline-none"
           value={apellido}
           onChange={(e) => setApellido(e.target.value)}
           required
         />
         <button
           type="submit"
-          className="bg-pink-500 hover:bg-pink-400 text-white font-bold py-2 rounded transition"
+          className="bg-pink-500/50 hover:bg-pink-400/50 rounded-xl text-white font-bold py-2 rounded transition"
         >
           Guardar
         </button>
@@ -65,4 +66,3 @@ export default function Form() {
     </section>
   );
 }
-*/}

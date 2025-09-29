@@ -16,7 +16,7 @@ export default function CreateTask({ setTasks }) {
         title,
         description,
         date: new Date().toLocaleDateString(),
-        completed: false, // 👈 siempre empieza como incompleta
+        completed: false, // 
       },
     ]);
 
@@ -27,7 +27,7 @@ export default function CreateTask({ setTasks }) {
       onSubmit={handleSubmit}
       className="max-w-md mx-auto bg-white p-6 shadow-lg rounded-xl"
     >
-      <h2 className="text-2xl font-bold mb-4">➕ Nueva Tarea</h2>
+      <h2 className="text-2xl font-bold mb-4"> Nueva Tarea</h2>
 
       <label className="block mb-2 font-semibold">Título</label>
       <input
@@ -42,6 +42,7 @@ export default function CreateTask({ setTasks }) {
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        pattern="^[^0-9]*$"
         required
         className="w-full p-2 border rounded-lg mb-4"
       ></textarea>

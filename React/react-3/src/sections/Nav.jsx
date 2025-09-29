@@ -23,11 +23,6 @@ export default function Nav() {
             Proyectos
           </a>
         </li>
-        {/*<li>
-          <a href="#form" className="hover:text-pink-400 transition">
-            Formulario
-          </a>
-        </li>*/}
       </ul>
     </nav>
   );

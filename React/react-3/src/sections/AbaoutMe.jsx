@@ -4,6 +4,10 @@ export default function AboutMe() {
       {/* Fondo estrellas */}
       <div className="absolute inset-0 stars -z-10"></div>
 
+      <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full overflow-hidden shadow-[0_0_40px_rgba(59,130,246,0.6)] z-[-10] border-2 border-blue-400">
+        <div className="w-full h-full bg-[url('./img/earth.png')] bg-cover bg-[length:300%_100%] animate-earth"></div>
+      </div>
+
       <div className="max-w-3xl text-center px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           About me

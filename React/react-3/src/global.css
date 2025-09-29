@@ -15,6 +15,20 @@
   animation: move-stars 200s linear infinite;
 }
 
+@keyframes earth-spin {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -300% 0;
+  }
+}
+
+.animate-earth {
+  animation: earth-spin 30s linear infinite;
+}
+
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
