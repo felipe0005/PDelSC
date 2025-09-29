@@ -7,7 +7,6 @@ import CreateTask from "./pages/CreateTask";
 export default function App() {
   const [tasks, setTasks] = useState([]);
 
-  // Traemos los datos del JSON en public
   useEffect(() => {
     fetch("/tasks.json")
       .then((res) => res.json())
@@ -19,11 +18,11 @@ export default function App() {
     <div className="min-h-screen bg-gray-100 text-gray-900">
       <nav className="bg-blue-600 p-4 text-white flex justify-between">
         <Link to="/" className="font-bold text-xl">
-          📋 Lista de Tareas
+          Lista de Tareas
         </Link>
         <Link
           to="/create"
-          className="bg-white text-blue-600 px-3 py-1 rounded-lg hover:bg-gray-200"
+          className=" font-bold border-2 border-white bg-white text-blue-600 px-3 py-1 rounded-lg hover:bg-blue-600 hover:text-white hover:border-orange-50 transition duration-200"
         >
           Nueva Tarea
         </Link>
