@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+    ActivityIndicator,
     Button,
     Image,
     Modal,
@@ -7,7 +8,7 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    View,
+    View
 } from "react-native";
 
 export default function News() {
@@ -16,29 +17,29 @@ export default function News() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
-        {/* Texto */}
+        {/*Componente Texto */}
         <Text style={styles.title}>Este es el componente Text</Text>
 
-        {/* Input */}
+        {/*Componente Input */}
         <TextInput
           placeholder="Escribir aquí..."
           placeholderTextColor="#aaa"
           style={styles.input}
         />
 
-        {/* Imagen */}
+        {/*Componente Imagen */}
         <Image
           source={{ uri: "https://reactnative.dev/docs/assets/p_cat2.png" }}
           style={styles.image}
         />
 
-        {/* Botón */}
+        {/*Componente Botón */}
         <View style={styles.buttonWrapper}>
           <Button title="Abrir Modal" onPress={() => setModalVisible(true)} />
         </View>
       </View>
 
-      {/* Modal */}
+      {/*Componente Modal */}
       <Modal visible={modalVisible} transparent animationType="slide">
         <View style={styles.modalBackground}>
           <View style={styles.modalBox}>
@@ -47,6 +48,9 @@ export default function News() {
           </View>
         </View>
       </Modal>
+
+     {/*Componente Activityindicator */}
+     <ActivityIndicator style={styles.activityIndicator} size={"large"} color={"#0a7ea4"} />
     </ScrollView>
   );
 }
@@ -109,5 +113,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 10,
     fontWeight: "600",
+  },
+  activityIndicator: {
+    marginTop: 20,
   },
 });
